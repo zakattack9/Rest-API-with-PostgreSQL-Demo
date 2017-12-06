@@ -1,7 +1,7 @@
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-const api = require('./server/routes/index.js')
+const api = require('./server/routes/todos.js')
 const Todo = require('./server/models').Todo;
 const TodoItem = require('./server/models').TodoItem;
 
@@ -14,7 +14,7 @@ app.use(logger('dev'));
 // Parse incoming requests data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
-app.use('/api', api);
+app.use('/api/todos', api);
 // Setup a default catch-all route that sends back a welcome message in JSON format.
 // require('./server/routes')(app);
 

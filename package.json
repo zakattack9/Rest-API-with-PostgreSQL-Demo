@@ -25,5 +25,8 @@
     "pg": "^7.4.0",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.22.6"
+  },
+  "bin": {
+    "express-server-postgresql-tutorial": "www.js"
   }
 }
